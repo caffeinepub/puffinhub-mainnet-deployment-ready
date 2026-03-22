@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Ocean-themed Puffin color palette with seafoam green additions */
+        /* Primary: Ocean blue (#1E88E5) */
+        --background: 1 0 0;
+        --foreground: 0.25 0.02 240;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 240;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 240;
+        
+        /* Primary: Ocean blue (#1E88E5) */
+        --primary: 0.62 0.18 245;
+        --primary-foreground: 1 0 0;
+        
+        /* Secondary: White */
+        --secondary: 0.98 0 0;
+        --secondary-foreground: 0.25 0.02 240;
+        
+        /* Muted: Light ocean blue (#E3F2FD) */
+        --muted: 0.95 0.02 240;
+        --muted-foreground: 0.50 0.02 240;
+        
+        /* Accent: Orange (#FF6B35) */
+        --accent: 0.68 0.20 35;
+        --accent-foreground: 1 0 0;
+        
+        /* Destructive: Red */
+        --destructive: 0.58 0.24 25;
+        --destructive-foreground: 1 0 0;
+        
+        /* Borders and inputs */
+        --border: 0.90 0.01 240;
+        --input: 0.90 0.01 240;
+        --ring: 0.62 0.18 245;
+        
+        /* Chart colors */
+        --chart-1: 0.62 0.18 245;
+        --chart-2: 0.68 0.20 35;
+        --chart-3: 0.95 0.02 240;
+        --chart-4: 0.25 0.02 240;
+        --chart-5: 0.50 0.02 240;
+        
+        /* Sidebar */
+        --sidebar: 1 0 0;
+        --sidebar-foreground: 0.25 0.02 240;
+        --sidebar-primary: 0.62 0.18 245;
+        --sidebar-primary-foreground: 1 0 0;
+        --sidebar-accent: 0.95 0.02 240;
+        --sidebar-accent-foreground: 0.25 0.02 240;
+        --sidebar-border: 0.90 0.01 240;
+        --sidebar-ring: 0.62 0.18 245;
+    }
+
+    .dark {
+        /* Dark mode: Charcoal background with ocean blue accents */
+        --background: 0.25 0.02 240;
+        --foreground: 0.98 0 0;
+        --card: 0.30 0.02 240;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.30 0.02 240;
+        --popover-foreground: 0.98 0 0;
+        
+        /* Primary: Bright ocean blue */
+        --primary: 0.70 0.18 245;
+        --primary-foreground: 0.25 0.02 240;
+        
+        /* Secondary: Light gray */
+        --secondary: 0.35 0.01 240;
+        --secondary-foreground: 0.98 0 0;
+        
+        /* Muted */
+        --muted: 0.35 0.02 240;
+        --muted-foreground: 0.70 0.01 240;
+        
+        /* Accent: Bright orange */
+        --accent: 0.68 0.20 35;
+        --accent-foreground: 0.98 0 0;
+        
+        /* Destructive */
+        --destructive: 0.65 0.24 25;
+        --destructive-foreground: 0.98 0 0;
+        
+        /* Borders and inputs */
+        --border: 0.40 0.02 240;
+        --input: 0.40 0.02 240;
+        --ring: 0.70 0.18 245;
+        
+        /* Chart colors */
+        --chart-1: 0.70 0.18 245;
+        --chart-2: 0.68 0.20 35;
+        --chart-3: 0.95 0.02 240;
+        --chart-4: 0.70 0.01 240;
+        --chart-5: 0.50 0.02 240;
+        
+        /* Sidebar */
+        --sidebar: 0.30 0.02 240;
+        --sidebar-foreground: 0.98 0 0;
+        --sidebar-primary: 0.70 0.18 245;
+        --sidebar-primary-foreground: 0.25 0.02 240;
+        --sidebar-accent: 0.35 0.02 240;
+        --sidebar-accent-foreground: 0.98 0 0;
+        --sidebar-border: 0.40 0.02 240;
+        --sidebar-ring: 0.70 0.18 245;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
